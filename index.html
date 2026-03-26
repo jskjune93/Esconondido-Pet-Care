@@ -1,267 +1,159 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escondido Pet Care</title>
-  <meta name="description" content="Calm, reliable dog walking, dog sitting, and boarding in Escondido and nearby North County." />
-  <style>
-    :root{
-      --bg:#f8fafc;
-      --text:#0f172a;
-      --muted:#475569;
-      --line:#e2e8f0;
-      --card:#ffffff;
-      --accent:#111827;
-      --soft:#f1f5f9;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--text);
-      background:#fff;
-      line-height:1.5;
-    }
-    a{text-decoration:none;color:inherit}
-    .container{max-width:1120px;margin:0 auto;padding:0 20px}
-    header{
-      position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);
-      backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
-    }
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
-    .brand-title{font-weight:700;font-size:1.08rem}
-    .brand-sub{font-size:.78rem;color:#64748b;margin-top:2px}
-    .nav-links{display:flex;gap:22px;color:#475569;font-size:.95rem}
-    .nav-links a:hover{color:var(--text)}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:13px 22px;border-radius:999px;border:1px solid var(--accent);
-      background:var(--accent);color:#fff;font-weight:600;transition:.2s ease;
-    }
-    .btn:hover{transform:translateY(-1px);opacity:.95}
-    .btn-outline{
-      background:#fff;color:var(--accent);border:1px solid #cbd5e1;
-    }
-    .hero{
-      background:
-        radial-gradient(circle at top left, rgba(226,232,240,.8), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(241,245,249,1), transparent 35%);
-      padding:72px 0 64px;
-    }
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
-    .badge{
-      display:inline-block;padding:8px 12px;border-radius:999px;
-      background:#f8fafc;border:1px solid var(--line);font-size:.75rem;font-weight:700;
-      letter-spacing:.03em;color:#334155;
-    }
-    h1{
-      font-size:clamp(2.4rem,6vw,4.3rem);line-height:1.03;letter-spacing:-.03em;
-      margin:16px 0 0;font-weight:700;
-    }
-    .lead{font-size:1.12rem;color:var(--muted);max-width:640px;margin-top:18px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-    .highlights{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
-    .highlight{
-      display:flex;align-items:center;gap:10px;padding:14px 16px;border-radius:18px;
-      background:#fff;border:1px solid var(--line);box-shadow:0 8px 20px rgba(15,23,42,.04);
-      font-size:.95rem;color:#334155;
-    }
-    .hero-card{
-      background:#fff;border:1px solid var(--line);border-radius:30px;padding:18px;
-      box-shadow:0 24px 60px rgba(15,23,42,.09);
-    }
-    .hero-image{
-      width:100%;height:320px;border-radius:22px;border:1px dashed #cbd5e1;background:
-      linear-gradient(135deg,#f8fafc,#e2e8f0);
-      display:grid;place-items:center;text-align:center;color:#64748b;padding:24px
-    }
-    section{padding:72px 0}
-    .section-muted{background:var(--bg)}
-    .section-title{font-size:2rem;line-height:1.1;letter-spacing:-.03em;margin:0 0 10px;font-weight:700}
-    .section-intro{max-width:760px;color:var(--muted);margin-bottom:28px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .card{
-      background:var(--card);border:1px solid var(--line);border-radius:28px;padding:26px;
-      box-shadow:0 10px 25px rgba(15,23,42,.04)
-    }
-    .card h3{margin:14px 0 0;font-size:1.2rem}
-    .card p{margin:10px 0 0;color:var(--muted)}
-    .icon{
-      width:48px;height:48px;border-radius:16px;background:var(--soft);display:grid;place-items:center;
-      font-size:22px
-    }
-    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
-    .contact-card{
-      background:#fff;border:1px solid var(--line);border-radius:30px;padding:28px;
-      box-shadow:0 18px 45px rgba(15,23,42,.06);
-    }
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    input, textarea{
-      width:100%;padding:14px 16px;border-radius:18px;border:1px solid #cbd5e1;
-      font:inherit;color:var(--text);background:#fff
-    }
-    textarea{min-height:140px;resize:vertical}
-    .full{grid-column:1/-1}
-    .small{font-size:.9rem;color:var(--muted)}
-    footer{padding:26px 0 34px;border-top:1px solid var(--line);color:#64748b;font-size:.92rem}
-    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    .phone-line{font-size:1.06rem;font-weight:600;margin-top:18px}
-    .list{display:grid;gap:14px}
-    @media (max-width: 900px){
-      .hero-grid,.grid-3,.contact-grid{grid-template-columns:1fr}
-      .nav-links{display:none}
-    }
-    @media (max-width: 640px){
-      .highlights,.form-grid{grid-template-columns:1fr}
-      .hero{padding-top:48px}
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container nav">
-      <div>
-        <div class="brand-title">Escondido Pet Care</div>
-        <div class="brand-sub">Dog walking • sitting • boarding</div>
-      </div>
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="btn" href="#contact">Request Availability</a>
-    </div>
-  </header>
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Phone, MapPin, ShieldCheck, Heart, MoonStar, PawPrint, Clock3, Star } from 'lucide-react';
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="badge">Local • Trusted • Limited Availability</span>
-        <h1>Calm, reliable pet care in Escondido.</h1>
-        <p class="lead">
-          A more personal alternative to app-based services from John at Escondido Pet Care.
-          Focused on your dog’s comfort, routine, safety, and overall well-being—whether it’s a walk,
-          sitting at home, or boarding.
-        </p>
-        <div class="hero-actions">
-          <a class="btn" href="tel:6192122756">Call or Text Now</a>
-          <a class="btn btn-outline" href="#contact">Request Availability</a>
+const services = [
+  {
+    title: 'Dog Walking',
+    description: 'Reliable walks that keep your dog active, happy, and on a consistent routine.',
+    icon: PawPrint,
+  },
+  {
+    title: 'Dog Sitting',
+    description: 'In-home care so your dog stays relaxed and comfortable while you are away.',
+    icon: Heart,
+  },
+  {
+    title: 'Boarding',
+    description: 'Safe overnight stays with close attention and a calm environment.',
+    icon: MoonStar,
+  },
+];
+
+const trustPoints = [
+  {
+    title: 'Trusted & Reliable',
+    text: 'Consistent, dependable care so you always know your dog is in good hands.',
+    icon: ShieldCheck,
+  },
+  {
+    title: '5-Star Experience',
+    text: 'Focused on delivering a great experience for both you and your dog every time.',
+    icon: Star,
+  },
+  {
+    title: 'Personalized Care',
+    text: 'Every dog gets attention tailored to their personality, energy, and needs.',
+    icon: Heart,
+  },
+];
+
+export default function EscondidoPetCareWebsite() {
+  return (
+    <div className="min-h-screen bg-[#f7faf9] text-slate-900">
+      <header className="sticky top-0 z-50 border-b bg-white">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
+          <div className="flex items-center gap-2 font-semibold text-lg">
+            <PawPrint className="h-5 w-5 text-green-600" />
+            <span className="text-green-600">PetCare</span>
+          </div>
+          <Button asChild className="rounded-full bg-green-600 hover:bg-green-700 px-5">
+            <a href="#contact">Book Now</a>
+          </Button>
         </div>
-        <div class="highlights">
-          <div class="highlight">✓ Serving Escondido & nearby areas</div>
-          <div class="highlight">✓ Limited client availability</div>
-          <div class="highlight">✓ Direct, simple booking</div>
-          <div class="highlight">✓ Focused, attentive care</div>
+      </header>
+
+      <section className="relative overflow-hidden">
+        <div className="mx-auto max-w-6xl px-4 py-16 text-center">
+          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-white shadow">
+              <Heart className="h-10 w-10 text-green-600" />
+            </div>
+            <h1 className="text-4xl font-bold md:text-6xl">
+              Trusted Pet Care,{' '}
+              <span className="text-green-600">Just for You</span>
+            </h1>
+            <p className="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
+              Professional dog walking, sitting, and boarding in Escondido. Reliable care that keeps your dog safe, happy, and comfortable.
+            </p>
+
+            <div className="mt-8 flex justify-center gap-4">
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 rounded-full px-6">
+                Book Now
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-full px-6">
+                Call or Text
+              </Button>
+            </div>
+          </motion.div>
         </div>
-      </div>
-      <div class="hero-card">
-        <div class="hero-image">
-          <div>
-            <div style="font-size:38px">🐶</div>
-            <div style="font-weight:700;margin-top:8px">Temporary hero image placeholder</div>
-            <div style="margin-top:8px;font-size:.95rem">Swap in a real photo of John with a dog, then later replace with your girlfriend’s photo for the strongest trust signal.</div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-6xl px-4 text-center">
+          <h2 className="text-3xl font-semibold mb-10">Why Pet Owners Trust Me</h2>
+          <div className="grid gap-8 md:grid-cols-3">
+            {trustPoints.map((point) => {
+              const Icon = point.icon;
+              return (
+                <div key={point.title} className="text-center">
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white shadow">
+                    <Icon className="h-8 w-8 text-green-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg">{point.title}</h3>
+                  <p className="text-slate-600 mt-2">{point.text}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">Services</h2>
-      <p class="section-intro">
-        A focused, selective local service for pet owners who value comfort, routine, and clear communication.
-      </p>
-      <div class="grid-3">
-        <div class="card">
-          <div class="icon">🐾</div>
-          <h3>Dog Walking</h3>
-          <p>Consistent, reliable walks that support your dog’s routine, energy levels, and daily well-being.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🏡</div>
-          <h3>Dog Sitting</h3>
-          <p>In-home care that keeps your dog comfortable, relaxed, and in a familiar environment while you are away.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🌙</div>
-          <h3>Boarding</h3>
-          <p>Safe, calm overnight stays with attentive supervision and a focus on comfort, structure, and routine.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="why" class="section-muted">
-    <div class="container">
-      <h2 class="section-title">Why choose John and Escondido Pet Care</h2>
-      <p class="section-intro">
-        This is built as a premium side business, not a volume-driven operation. That means fewer clients,
-        more attention, and a calmer experience for both owners and dogs.
-      </p>
-      <div class="grid-3">
-        <div class="card">
-          <div class="icon">⏰</div>
-          <h3>Routine-focused care</h3>
-          <p>Dogs thrive on consistency. Walks, visits, and stays are structured around your dog’s normal routine to reduce stress and help keep them balanced.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🛡️</div>
-          <h3>Safety and attention first</h3>
-          <p>Every visit prioritizes awareness, control, and a calm environment so your dog stays safe and comfortable at all times.</p>
-        </div>
-        <div class="card">
-          <div class="icon">❤️</div>
-          <h3>More personal than apps</h3>
-          <p>Direct communication and fewer clients means more attention, better care, and a stronger relationship with both owner and dog.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container contact-grid">
-      <div>
-        <h2 class="section-title">Request availability</h2>
-        <p class="section-intro" style="margin-bottom:18px">
-          Reach out directly to check availability with John. Client spots are intentionally limited to maintain quality care.
-        </p>
-        <div class="list small">
-          <div><strong>Service area:</strong> Escondido and nearby North County</div>
-          <div><strong>Pricing:</strong> Based on service, schedule, and fit</div>
-          <div><strong>Best contact method:</strong> Call or text</div>
-        </div>
-        <div class="phone-line">Call/Text: <a href="tel:6192122756">619-212-2756</a></div>
-      </div>
-
-      <div class="contact-card">
-        <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST">
-          <div class="form-grid">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="tel" name="phone" placeholder="Phone number" required />
-            <input class="full" type="email" name="email" placeholder="Email" required />
-            <input class="full" type="text" name="service" placeholder="Service needed" />
-            <textarea class="full" name="message" placeholder="Tell us about your dog, your dates, or the kind of help you need"></textarea>
+      <section className="py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl font-semibold mb-10 text-center">Services</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            {services.map((service) => {
+              const Icon = service.icon;
+              return (
+                <Card key={service.title} className="rounded-2xl shadow">
+                  <CardContent className="p-6 text-center">
+                    <Icon className="h-8 w-8 mx-auto text-green-600" />
+                    <h3 className="mt-4 text-xl font-semibold">{service.title}</h3>
+                    <p className="mt-2 text-slate-600">{service.description}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
-          <input type="hidden" name="_subject" value="New Escondido Pet Care inquiry" />
-          <input type="hidden" name="_captcha" value="false" />
-          <div class="hero-actions" style="margin-top:18px">
-            <button class="btn" type="submit">Submit Request</button>
-            <a class="btn btn-outline" href="tel:6192122756">Call/Text Instead</a>
-          </div>
-          <p class="small" style="margin-top:14px">Replace <strong>YOUR-EMAIL-HERE</strong> in the form code with the email address you want lead requests sent to.</p>
-        </form>
-      </div>
-    </div>
-  </section>
+        </div>
+      </section>
 
-  <footer>
-    <div class="container footer-inner">
-      <div>© 2026 Escondido Pet Care • John</div>
-      <div><a href="#services">Services</a> · <a href="#why">Why Us</a> · <a href="#contact">Contact</a></div>
+      <section className="bg-green-600 py-16 text-white text-center">
+        <h2 className="text-3xl font-bold">Ready to Give Your Pet the Best Care?</h2>
+        <p className="mt-4 text-lg">Book your first visit today and experience the difference.</p>
+        <div className="mt-6">
+          <Button size="lg" className="bg-white text-black rounded-full px-6">
+            Get Started Now
+          </Button>
+        </div>
+      </section>
+
+      <section id="contact" className="mx-auto max-w-5xl px-4 py-16">
+        <h2 className="text-3xl font-semibold mb-4">Book or Inquire</h2>
+        <Card>
+          <CardContent className="p-6">
+            <div className="grid gap-4 md:grid-cols-2">
+              <Input placeholder="Your name" />
+              <Input placeholder="Phone number" />
+              <Input placeholder="Email" className="md:col-span-2" />
+              <Textarea placeholder="Tell us about your dog" className="md:col-span-2" />
+            </div>
+            <div className="mt-4">
+              <Button className="bg-green-600 hover:bg-green-700">Submit</Button>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      <footer className="text-center text-sm text-slate-500 pb-8">
+        © 2026 Escondido Pet Care
+      </footer>
     </div>
-  </footer>
-</body>
-</html>
+  );
+}
