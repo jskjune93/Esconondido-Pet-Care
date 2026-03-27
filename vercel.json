@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "escondidodogwalking.com"
+        }
+      ],
+      "destination": "https://escondidopetcare.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "escondidodogwalkers.com"
+        }
+      ],
+      "destination": "https://escondidopetcare.com/$1",
+      "permanent": true
+    }
+  ]
+}
