@@ -10,10 +10,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-
   <body class="min-h-screen bg-[#f6f7f2] text-slate-900">
-
-    <!-- HEADER -->
     <header class="sticky top-0 z-50 border-b border-[#d8dfcf] bg-white/95 backdrop-blur">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
         <div class="flex items-center gap-3">
@@ -24,9 +21,7 @@
             <div class="text-lg font-semibold tracking-tight text-[#7f9470]">
               Escondido Pet Care
             </div>
-            <div class="text-sm text-slate-500">
-              Based in Escondido, serving North County
-            </div>
+            <div class="text-sm text-slate-500">Based in Escondido, serving North County</div>
           </div>
         </div>
 
@@ -39,7 +34,6 @@
       </div>
     </header>
 
-    <!-- HERO -->
     <section class="py-14 md:py-20">
       <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2">
         <div>
@@ -57,7 +51,7 @@
             You get consistent care, clear communication, and a calm environment your pet can trust.
           </p>
 
-          <p class="mt-4 text-sm text-[#7f9470] font-medium">
+          <p class="mt-4 text-sm font-medium text-[#7f9470]">
             Limited availability — now accepting a few new clients in Escondido.
           </p>
 
@@ -89,13 +83,72 @@
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
+    <section class="bg-white py-14">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="mb-8 text-center">
+          <h2 class="text-3xl font-semibold">Real Dogs. Real Care.</h2>
+          <p class="mx-auto mt-3 max-w-2xl text-slate-600">
+            A look at the dogs we care for and the calm, home-based environment they enjoy.
+          </p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#e5eadf]">
+            <img
+              src="/running.png"
+              alt="Dog running happily in the yard"
+              class="aspect-[4/5] w-full object-cover object-center"
+            />
+          </div>
+
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#e5eadf]">
+            <img
+              src="/maya.png"
+              alt="Happy dog on a walk"
+              class="aspect-[4/5] w-full object-cover object-center"
+            />
+          </div>
+
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#e5eadf]">
+            <img
+              src="/hays.png"
+              alt="Dog relaxing and looking out over the yard"
+              class="aspect-[4/5] w-full object-contain bg-[#f8faf5]"
+            />
+          </div>
+
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#e5eadf]">
+            <img
+              src="/marcy.png"
+              alt="Dog relaxing in a sweater"
+              class="aspect-[4/5] w-full object-cover object-center"
+            />
+          </div>
+
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#e5eadf]">
+            <img
+              src="/ruby1.png"
+              alt="Happy dog portrait"
+              class="aspect-[4/5] w-full object-cover object-center"
+            />
+          </div>
+
+          <div class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[#e5eadf]">
+            <img
+              src="/yard.jpg"
+              alt="Safe yard and outdoor space at Escondido Pet Care"
+              class="aspect-[4/5] w-full object-cover object-center"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-[#f6f7f2] py-16">
       <div class="mx-auto max-w-6xl px-4 text-center">
         <h2 class="mb-10 text-3xl font-semibold">Why People Choose Us</h2>
 
         <div class="grid gap-8 md:grid-cols-3">
-
           <div class="rounded-2xl p-4">
             <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#eef2e7] text-3xl shadow-sm">
               👤
@@ -125,19 +178,41 @@
               Call or text anytime. No middleman, no app delays — just clear, direct updates.
             </p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-6xl px-4 md:flex md:items-center md:gap-10">
+        <img
+          src="/couple.jpg"
+          alt="Owners of Escondido Pet Care"
+          class="mb-6 w-full rounded-2xl shadow md:mb-0 md:w-1/2"
+        />
+
+        <div class="md:w-1/2">
+          <h2 class="mb-4 text-3xl font-semibold">Who We Are</h2>
+          <p class="text-slate-600">
+            We’re local Escondido homeowners providing reliable, personalized pet care.
+            Unlike large apps, we keep things simple — consistent care, direct communication,
+            and a safe, comfortable environment your pet can trust.
+          </p>
+          <p class="mt-4 text-slate-600">
+            We treat every dog like our own and focus on building real relationships with both pets and owners.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="py-16">
       <div class="mx-auto max-w-6xl px-4">
         <h2 class="mb-10 text-center text-3xl font-semibold">Services</h2>
 
         <div class="grid gap-6 md:grid-cols-3">
-
           <div class="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-[#e5eadf]">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#eef2e7] text-3xl">
+              🐾
+            </div>
             <h3 class="mt-4 text-xl font-semibold">Dog Walking</h3>
             <p class="mt-2 text-slate-600">
               Structured, reliable walks to keep your dog exercised and settled throughout the day.
@@ -145,6 +220,9 @@
           </div>
 
           <div class="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-[#e5eadf]">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#eef2e7] text-3xl">
+              🏡
+            </div>
             <h3 class="mt-4 text-xl font-semibold">Drop-In Visits</h3>
             <p class="mt-2 text-slate-600">
               Feeding, playtime, and check-ins while you’re at work or away for the day.
@@ -152,17 +230,33 @@
           </div>
 
           <div class="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-[#e5eadf]">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#eef2e7] text-3xl">
+              🌙
+            </div>
             <h3 class="mt-4 text-xl font-semibold">Boarding</h3>
             <p class="mt-2 text-slate-600">
               Overnight care in a calm, home setting with close attention and daily updates.
             </p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
+    <section id="reviews" class="bg-white py-16">
+      <div class="mx-auto max-w-5xl px-4 text-center">
+        <h2 class="mb-3 text-3xl font-semibold">What Clients Say</h2>
+        <p class="mx-auto mb-10 max-w-2xl text-slate-600">
+          Reviews coming soon from local pet owners.
+        </p>
+
+        <div class="rounded-2xl bg-[#f8faf5] p-8 text-center shadow-sm ring-1 ring-[#e5eadf]">
+          <p class="text-slate-700">
+            We’re currently gathering our first reviews. Check back soon for feedback from local clients.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-[#9caf88] py-16 text-center text-white">
       <div class="mx-auto max-w-4xl px-4">
         <h2 class="text-3xl font-bold">Need help with your pet this week?</h2>
@@ -180,5 +274,53 @@
       </div>
     </section>
 
+    <section id="contact" class="mx-auto max-w-5xl px-4 py-16">
+      <h2 class="mb-4 text-3xl font-semibold">Send a Message</h2>
+      <p class="mb-6 text-slate-600">
+        Have a question or want to set something up? Fill this out and we’ll get back to you soon.
+        You can also call or text Niki directly at
+        <a href="tel:+16192122756" class="font-medium text-[#7f9470] underline underline-offset-4">
+          (619) 212-2756
+        </a>.
+      </p>
+
+      <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-[#e5eadf]">
+        <form class="grid gap-4 md:grid-cols-2">
+          <input
+            type="text"
+            placeholder="Your name"
+            class="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#9caf88]"
+          />
+          <input
+            type="tel"
+            placeholder="Phone number"
+            class="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#9caf88]"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#9caf88] md:col-span-2"
+          />
+          <textarea
+            placeholder="Tell us about your pet and what kind of help you need"
+            rows="5"
+            class="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#9caf88] md:col-span-2"
+          ></textarea>
+
+          <div class="md:col-span-2">
+            <button
+              type="submit"
+              class="rounded-full bg-[#9caf88] px-6 py-3 text-white transition hover:bg-[#879a74]"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="border-t border-[#dde5d3] bg-white py-8 text-center text-sm text-slate-500">
+      © 2026 Escondido Pet Care
+    </footer>
   </body>
 </html>
