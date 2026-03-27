@@ -25,12 +25,20 @@
           </div>
         </div>
 
-        <a
-          href="tel:+16192122756"
-          class="rounded-full bg-[#9caf88] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#879a74]"
-        >
-          Call or Text Niki
-        </a>
+        <div class="flex items-center gap-3">
+          <a
+            href="tel:+16192122756"
+            class="rounded-full bg-[#9caf88] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#879a74]"
+          >
+            Call Niki
+          </a>
+          <a
+            href="sms:+16192122756?body=Hi%20Niki%2C%20I%E2%80%99m%20interested%20in%20pet%20care."
+            class="rounded-full border border-[#cfd8c3] bg-white px-5 py-2.5 text-sm font-medium text-slate-900 transition hover:bg-[#f3f5ee]"
+          >
+            Text Niki
+          </a>
+        </div>
       </div>
     </header>
 
@@ -60,7 +68,13 @@
               href="tel:+16192122756"
               class="rounded-full bg-[#9caf88] px-6 py-3 text-center text-white transition hover:bg-[#879a74]"
             >
-              Call or Text (619) 212-2756
+              Call (619) 212-2756
+            </a>
+            <a
+              href="sms:+16192122756?body=Hi%20Niki%2C%20I%E2%80%99m%20interested%20in%20pet%20care."
+              class="rounded-full border border-[#cfd8c3] bg-white px-6 py-3 text-center text-slate-900 transition hover:bg-[#f3f5ee]"
+            >
+              Text Niki
             </a>
             <a
               href="#contact"
@@ -270,12 +284,18 @@
         <p class="mt-4 text-lg text-[#eef3e9]">
           Call or text directly — we’ll make it simple to get started.
         </p>
-        <div class="mt-6">
+        <div class="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href="tel:+16192122756"
             class="inline-block rounded-full bg-white px-6 py-3 font-medium text-slate-900 transition hover:bg-[#f3f5ee]"
           >
-            Call or Text Niki
+            Call Niki
+          </a>
+          <a
+            href="sms:+16192122756?body=Hi%20Niki%2C%20I%E2%80%99m%20interested%20in%20pet%20care."
+            class="inline-block rounded-full border border-white px-6 py-3 font-medium text-white transition hover:bg-white hover:text-slate-900"
+          >
+            Text Niki
           </a>
         </div>
       </div>
@@ -292,25 +312,41 @@
       </p>
 
       <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-[#e5eadf]">
-        <form class="grid gap-4 md:grid-cols-2">
-          <input
-            type="text"
-            placeholder="Your name"
-            class="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#9caf88]"
-          />
+        <form
+          action="https://formsubmit.co/jskjune93@gmail.com"
+          method="POST"
+          class="grid gap-4 md:grid-cols-2"
+        >
+       <input type="hidden" name="_subject" value="New Escondido Pet Care website inquiry" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="https://www.escondidopetcare.com" />
+
+  <input
+    type="text"
+    name="name"
+    placeholder="Your name"
+    required
+    class="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#9caf88]"
+  />
           <input
             type="tel"
+            name="phone"
             placeholder="Phone number"
+            required
             class="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#9caf88]"
           />
           <input
             type="email"
+            name="email"
             placeholder="Email"
+            required
             class="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#9caf88] md:col-span-2"
           />
           <textarea
+            name="message"
             placeholder="Tell us about your pet and what kind of help you need"
             rows="5"
+            required
             class="rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-[#9caf88] md:col-span-2"
           ></textarea>
 
@@ -324,6 +360,7 @@
           </div>
         </form>
       </div>
+
     </section>
 
     <footer class="border-t border-[#dde5d3] bg-white py-8 text-center text-sm text-slate-500">
